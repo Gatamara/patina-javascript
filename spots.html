@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patina - Spots</title>
+    <meta name="author" content="Tamara Salinas" />
+    <meta name="keywords" content="patina, skate, app ,skater, skatepark, spots " />
+    <meta name="description" content="Patina un sitio web para buscar spots para andar en skate " />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/estilos.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-logo-navbar" src="assets/img/logo-navbar.png" alt="Logo Patina">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="spots.html">Spots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="appmovil.html">App Movil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-form">
+        <h2 id="titulo1">Agrega tu Spot</h2>
+        <div class="container">
+            <form id="form-inputs">
+
+                <div class="contein-input">
+
+                    <div class="inputs" id="miForm">
+                        <div class="input">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Nombre del spot" required>
+                        </div>
+                        <div class="input seleccion-input">
+                            <label for="ciudad">Ciudad</label>
+                            <select name="ciudad" id="ciudad" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option value="Santiago">Santiago</option>
+                                <option value="La Serena">La Serena</option>
+                                <option value="Buenos Aires">Buenos Aires</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label for="imagen">Url Imagen</label>
+                            <input type="text" class="form-control form-control-sm" id="imagen" name="imagen" placeholder="Url de una imagen del spot">
+                        </div>
+                        <br>
+
+
+                        <div class="input seleccion-input">
+                            <label for="obstaculo">Seleccione obstaculos que estan en el spot</label>
+                            <br>
+                            <br>
+
+
+                            <label><input type="checkbox" class="obstaculos form-check-input form-tipo" value="escalera"> Escalera</label>
+                            <label><input type="checkbox" class="obstaculos form-check-input form-tipo" value="baranda"> Baranda</label>
+                            <label><input type="checkbox" class="obstaculo form-check-input form-tipo" value="rampa"> Rampa</label>
+                            <label><input type="checkbox" class="obstaculos form-check-input form-tipo" value="bowl"> Bowl</label><br>
+                            <label><input type="checkbox" class="obstaculos form-check-input form-tipo" value="banca"> Banca</label>
+                            <label><input type="checkbox" class="obstaculos form-check-input form-tipo" value="piramide"> Piramide</label>
+                            <label><input type="checkbox" class="obstaculos form-check-input form-tipo" value="halfpipe"> Halfpipe</label>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div id="botones">
+                    <button id="btn" class="btn btn-secondary w-xs-100 " type="button">Agregar</button>
+                    <button id="btn-reset" class="btn btn-secondary w-xs-100 " type="reset">Restablecer</button>
+                </div>
+
+
+
+            </form>
+            <div id="mensaje-agregado"></div>
+        </div>
+
+    </main>
+
+    <div>
+        <section id="spots">
+            <h2 id="titulo-2"> Spots Agregados</h2>
+
+
+            <div class="container-fluid">
+                <div class=" buscar-spot ">
+                    <div class="input">
+                        <input type="text" id="buscar-spot" name="buscar-spot" class="form-control " placeholder="Ingresa el nombre del spot" aria-label="default input example" />
+                    </div>
+                </div>
+                <div class="row" id="filtro-spot">
+
+                    <form id="buscador" action="">
+
+
+                        <div class="col-xs-12 filtros">
+                            <h5>Filtros</h5>
+
+
+                            <h6> Ciudad</h6>
+
+                            <div class="form-check">
+                                <input name="ciudades" class="form-check-input form-tipo" type="checkbox" value="Santiago" id="check">
+                                <label>Santiago</label>
+                            </div>
+                            <div class="form-check">
+                                <input name="ciudades" class="form-check-input form-tipo" type="checkbox" value="La Serena" id="check">
+                                <label>La Serena </label>
+
+                            </div>
+                            <div class="form-check">
+                                <input name="ciudades" class="form-check-input form-tipo" type="checkbox" value="Buenos Aires" id="check">
+                                <label>Buenos Aires</label>
+                            </div>
+
+
+
+                            <h6>Obstaculos</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="escalera">
+                                <label class="form-check-label" for="flexCheckDefault">Escalera</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="baranda">
+                                <label class="form-check-label" for="flexCheckDefault"> Baranda </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="muro">
+                                <label class="form-check-label" for="flexCheckDefault"> Muro</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="piramide">
+                                <label class="form-check-label" for="flexCheckDefault">Piramide</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="halfpipe">
+                                <label class="form-check-label" for="flexCheckDefault">Halfpipe</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="bowl">
+                                <label>Bowl</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="form-obstaculo" type="checkbox" value="banca">
+                                <label>Banca</label>
+                            </div>
+
+
+
+                        </div>
+
+                    </form>
+
+
+
+
+                    <div class="spots">
+
+
+
+                        <div id="spots-contenedor">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Sitio Web hecho por Tamara Salinas</p>
+        <ul class="social-media">
+            <li>
+                <a href="http://www.facebook.com">
+                    <img src="./assets/img/social-f.png" alt="facebook">
+
+                </a>
+            </li>
+            <li>
+                <a href="http://www.Instagram.com">
+                    <img src="./assets/img/social-i.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com/">
+                    <img src="./assets/img/social-w.png" alt="Whatsaap">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/">
+                    <img src="./assets/img/social-y.png" alt="youtube">
+                </a>
+            </li>
+        </ul>
+
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/agregar.js"></script>
+    <script src="/js/index.js"></script>
+
+
+</body>
+
+</html>

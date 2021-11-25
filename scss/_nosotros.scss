@@ -1,0 +1,61 @@
+main.main-nosotros {
+    background-image: url(../img/patina-bg-website-v3.png);
+    background-size: cover;
+    section#nosotros {
+        min-height: 100vh;
+        .titulo-nosotros {
+            text-align: center;
+            padding: 0px 100px 0px 100px;
+            font-size: 22px;
+            letter-spacing: 2px;
+            h3 {
+                padding-bottom: 20px;
+                letter-spacing: 2px;
+            }
+            h2 {
+                padding: 25px 0px 25px 0px;
+            }
+        }
+        .img-abajo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 40px;
+            justify-content: center;
+            .box {
+                justify-items: center;
+                text-align: center;
+                letter-spacing: 2px;
+                img {
+                    max-width: 100%;
+                }
+            }
+            h3 {
+                letter-spacing: 3px;
+            }
+        }
+    }
+    @media(max-width: $breakpoint-xs) {
+        section#nosotros {
+            .titulo-nosotros {
+                font-size: 12px;
+                padding: 0;
+            }
+        }
+    }
+    @media(max-width: $breakpoint-sm) {
+        section#nosotros {
+            .titulo-nosotros {
+                font-size: 18px;
+                padding: 0;
+            }
+        }
+    }
+    @media(max-width: $breakpoint-md) {
+        section#nosotros {
+            .titulo-nosotros {
+                font-size: 18px;
+                ;
+            }
+        }
+    }
+}

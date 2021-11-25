@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patina - Nosotros</title>
+    <meta name="author" content="Tamara Salinas" />
+    <meta name="keywords" content="patina, skate, app ,skater, skatepark, spots " />
+    <meta name="description" content="Patina un sitio web para buscar spots para andar en skate " />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/estilos.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-logo-navbar" src="assets/img/logo-navbar.png" alt="Logo Patina">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="spots.html">Spots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="appmovil.html">App Movil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="agregar-spot">
+        <h2 id="titulo1">Agrega tu Spot</h2>
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre del skatepark">
+
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad donde esta el skatepark">
+
+            <label for="imagen">Url Imagen</label>
+            <input type="text" id="imagen" name="imagen" placeholder="Url de una imagen del skatepark">
+            <br>
+
+            <label for="obstaculo">Seleccione obstaculos que estan en el skatepark</label>
+            <br>
+            <label><input type="checkbox" class="obstaculos"  value="escalera"> Escalera</label><br>
+            <label><input type="checkbox" class="obstaculos"  value="baranda"> Baranda</label><br>
+            <label><input type="checkbox" class="obstaculos"  value="rampa"> Rampa</label><br>
+            <label><input type="checkbox" class="obstaculos"  value="bowl"> Bowl</label><br>
+            <label><input type="checkbox" class="obstaculos"  value="banca"> Banca</label><br>
+            <label><input type="checkbox" class="obstaculos"  value="piramide"> Piramide</label><br>
+            <label><input type="checkbox" class="obstaculos"  value="halfpipe"> Halfpipe</label><br>
+            <button onclick="nuevoSkatepark()" type="button">Agregar</button>
+
+        </form>
+
+        <div id="skateparks">
+
+
+        </div>
+
+
+
+
+    </main>
+    <footer class="footer">
+        <p>Sitio Web hecho por Tamara Salinas</p>
+        <ul class="social-media">
+            <li>
+                <a href="http://www.facebook.com">
+                    <img src="./assets/img/social-f.png" alt="facebook">
+
+                </a>
+            </li>
+            <li>
+                <a href="http://www.Instagram.com">
+                    <img src="./assets/img/social-i.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com/">
+                    <img src="./assets/img/social-w.png" alt="Whatsaap">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/">
+                    <img src="./assets/img/social-y.png" alt="youtube">
+                </a>
+            </li>
+        </ul>
+
+    </footer>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/db.js"></script>
+</body>
+
+</html>
