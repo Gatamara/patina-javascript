@@ -34,11 +34,10 @@
                             <a class="nav-link" href="spots.html">Spots</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="favoritos.html">Favoritos</a>
+                            <a class="nav-link active" aria-current="page" href="favoritos.html">Favoritos</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="appmovil.html">App Movil</a>
+                            <a class="nav-link" aria-current="page" href="appmovil.html">App Movil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="nosotros.html">Nosotros</a>
@@ -52,45 +51,15 @@
             </div>
         </nav>
     </header>
-    <main class="main-app">
-        <div class="container ">
-            <div class="titulo-grande">
-                <h1>App Movil</h1>
-                <p>Cuando tengas PATINA descargada en tu celular podrás realizar las siguientes acciones.</p>
-
-            </div>
-            <section id="app-movil">
-
-                <div class="texto-izquierdo">
-                    <h3>Busca Spots </h3>
-                    <p> Encuentra los spots mas cercanos a tu ubicación en un radio de 100 km. </p>
-                    <h3>Conoce Skaters </h3>
-                    <p>Recibe notificaciones cuando haya skaters patinando en tus spots favoritos. </p>
-                    <h3>Eventos</h3>
-                    <p>Podrás ver información de eventos relacionados con el skate y campeonatos.</p>
-                </div>
-                <div class="imagen-central">
-                    <img src="assets/img/screen-shot-6.png" alt="vista app movil de patina">
-                </div>
-                <div class="texto-derecho">
-                    <h3>Comenta</h3>
-                    <p>Escribe tu opinión en cada spot que visites para que otros skaters puedan leerla antes de patinar en él.
-                    </p>
-                    <h3>información</h3>
-                    <p>Podrás saber si los spots tienen guardia, horarios de funcionamiento, obtaculos que hay, entre otras cosas.</p>
-                    <h3>Agregar Sport</h3>
-                    <p>Si encuentras spots algún spot que valga la pena, puedes sacarle fotos y subirlo.</p>
-
-                </div>
-
-
-            </section>
-            <div class="imagen-descarga">
-                <img src="assets/img/image-4.png" alt="descarga tu app para android y iphone">
-            </div>
+    <main id="main-favo">
+        <h3 id="title-fav">Favoritos</h3>
+        <p>Aqui encontraras todos tus spots agregados a Favoritos !</p>
+        <div class="favoritos-cont">
+            <div id="favoritos"></div>
 
 
         </div>
+
 
     </main>
     <footer class="footer">
@@ -122,6 +91,8 @@
     </footer>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/favoritos.js"></script>
+
 </body>
 
 </html>

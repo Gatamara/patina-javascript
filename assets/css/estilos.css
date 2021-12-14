@@ -51,7 +51,7 @@ header {
         display: flex;
         position: relative;
         max-height: 330px;
-        border-radius: 20px 100px;
+        border-radius: 20px;
         overflow: hidden;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         justify-content: center;
@@ -68,6 +68,12 @@ header {
           transition: visibility 0s, opacity 0.5s ease; }
           #spots-destacados .spot-item .spot-content .spot-img .spot-hover img {
             height: 80%; }
+          #spots-destacados .spot-item .spot-content .spot-img .spot-hover a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-size: x-large; }
         #spots-destacados .spot-item .spot-content .spot-img:hover .spot-hover {
           visibility: visible;
           opacity: 1; }
@@ -88,8 +94,8 @@ header {
     margin: 0px 20px; } }
 
 .main-form {
-  background: black;
-  background: radial-gradient(circle, black 14%, #5a5050 100%);
+  background-color: #070f64;
+  background-image: linear-gradient(43deg, #070f64 0%, #4c1748 46%, #5e5952 100%);
   padding: 50px 0px; }
   .main-form #titulo1 {
     text-align: center; }
@@ -145,7 +151,7 @@ section#spots #filtro-spot {
         display: flex;
         position: relative;
         max-height: 330px;
-        border-radius: 20px 100px;
+        border-radius: 20px;
         overflow: hidden;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         justify-content: center;
@@ -275,6 +281,67 @@ main section#contacto {
 .valido {
   border: 2px solid greenyellow; }
 
+#main-favo {
+  background-color: #070f64;
+  background-image: linear-gradient(43deg, #070f64 0%, #4c1748 46%, #5e5952 100%); }
+
+#title-fav {
+  text-align: center;
+  padding: 15px; }
+
+.spot-item {
+  display: inline-block;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  background: #333333;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-align: center; }
+  .spot-item .spot-content {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px; }
+    .spot-item .spot-content .spot-img {
+      display: flex;
+      position: relative;
+      max-height: 330px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      justify-content: center;
+      align-items: center; }
+      .spot-item .spot-content .spot-img .likes {
+        position: absolute;
+        width: 35px;
+        top: 5%;
+        left: 5%;
+        z-index: 2; }
+    .spot-item .spot-content .spot-obs {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 10px;
+      padding-bottom: 10px; }
+      .spot-item .spot-content .spot-obs .span-spot {
+        background-color: #CF252B;
+        border-radius: 5px;
+        padding: 3px 6px;
+        font-size: 14px;
+        margin-left: 5px; }
+
+.spot-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 10px 5px 10px;
+  box-sizing: border-box; }
+  .spot-info .spot-tipo {
+    color: #CF252B;
+    font-weight: 900;
+    font-family: 'Roboto' !important;
+    font-size: 1.3em !important; }
+  .spot-info .spot-nombre {
+    font-size: 1.3em !important; }
+
 .footer {
   background-color: #212121;
   display: inline-flex;
@@ -292,3 +359,36 @@ main section#contacto {
       display: inline-block;
       margin: 0.15em;
       padding: 0 20px; }
+
+.ubication {
+  background-color: #070f64;
+  background-image: linear-gradient(43deg, #070f64 0%, #4c1748 46%, #5e5952 100%);
+  display: flex;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 20px; }
+  .ubication #app {
+    display: inline-block;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: #333333;
+    border-radius: 20px;
+    margin-bottom: 10px; }
+    .ubication #app .spot-content {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 20px; }
+      .ubication #app .spot-content .spot-img {
+        display: flex;
+        position: relative;
+        max-height: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        align-items: center; }
+  .ubication #map {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border-radius: 10px; }

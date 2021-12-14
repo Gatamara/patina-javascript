@@ -6,20 +6,75 @@ const obtenerSpots = () => {
 
 obtenerSpots();
 
+
+const agregarFavorito = ( nombre ) => {
+
+    const spots = JSON.parse( localStorage.getItem( 'spots' ) );
+    const spotFavorito = spots.find( el => el.name === nombre );
+
+
+
+    if ( localStorage.getItem( 'spots-favoritos' ) == null ) {
+        const spotsFavoritos = []
+        spotsFavoritos.push( spotFavorito )
+
+
+
+        localStorage.setItem( 'spots-favoritos', JSON.stringify( spotsFavoritos ) )
+
+    } else {
+        const spotsFavoritos = JSON.parse( localStorage.getItem( 'spots-favoritos' ) )
+        spotsFavoritos.push( spotFavorito )
+
+        localStorage.setItem( 'spots-favoritos', JSON.stringify( spotsFavoritos ) )
+
+    }
+
+
+
+}
+
+const validacionFavorito = () => {
+
+}
+
+
+const eliminarFavorito = ( nombre ) => {
+
+    if ( localStorage.getItem( 'spots-favoritos' ) != null ) {
+        let spotsFavoritos = JSON.parse( localStorage.getItem( 'spots-favoritos' ) )
+
+
+        spotsFavoritos = spotsFavoritos.filter( spot => spot.name != nombre )
+        localStorage.setItem( 'spots-favoritos', JSON.stringify( spotsFavoritos ) )
+
+
+    }
+
+}
+
 const agregarEventoLike = () => {
 
     $( '.likes' ).each( function( index ) {
 
         $( this ).on( "click", () => {
 
-            $( this ).fadeOut( 300, function() {
+            $( this ).fadeOut( 200, function() {
 
                 if ( $( this ).attr( "src" ).includes( "/assets/img/love-1.png" ) ) {
                     $( this ).attr( "src", "./assets/img/love.png" );
+                    eliminarFavorito( $( this ).data( "name" ) )
+
+
+
+
                 } else {
-                    $( this ).attr( "src", "./assets/img/love-1.png" )
+                    $( this ).attr( "src", "./assets/img/love-1.png" );
+                    agregarFavorito( $( this ).data( "name" ) );
+
+
                 }
-                $( this ).fadeIn( 300 );
+                $( this ).fadeIn( 200 );
             } );
         } )
 
@@ -50,7 +105,10 @@ const mostrarSpots = skateparks => {
                     <div class="spot-img">                      
                         <img class="spot-imagen" src="${skatepark.filename}" alt="imagen Skatepark">
                         
-                        <img class="likes"  src="./assets/img/love.png" alt="parque-losreyes">                   
+                        <img  data-name="${skatepark.name}" class="likes" src="./assets/img/love.png" >
+                        
+
+                                       
                     </div>
                     <div class="spot-info">
                         <h4>${skatepark.name}</h4>
@@ -63,6 +121,7 @@ const mostrarSpots = skateparks => {
                     </div>
 
                 </div>
+                <div class="mensaje-favorito"></div>
             </div>
             ` )
         $( '.spot-item' ).fadeIn( 1000 );
@@ -73,15 +132,6 @@ const mostrarSpots = skateparks => {
     agregarEventoLike()
 }
 mostrarSpots( spots );
-
-
-
-
-
-
-
-
-
 
 
 

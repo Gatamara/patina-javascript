@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patina - App Movil</title>
+    <title>Patina - Nosotros</title>
     <meta name="author" content="Tamara Salinas" />
     <meta name="keywords" content="patina, skate, app ,skater, skatepark, spots " />
     <meta name="description" content="Patina un sitio web para buscar spots para andar en skate " />
@@ -36,12 +36,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="favoritos.html">Favoritos</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="appmovil.html">App Movil</a>
+                            <a class="nav-link" href="appmovil.html">App Movil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
@@ -52,46 +51,13 @@
             </div>
         </nav>
     </header>
-    <main class="main-app">
-        <div class="container ">
-            <div class="titulo-grande">
-                <h1>App Movil</h1>
-                <p>Cuando tengas PATINA descargada en tu celular podrás realizar las siguientes acciones.</p>
+    <main class="ubication">
+        <div>
+            <div id="app">
 
             </div>
-            <section id="app-movil">
-
-                <div class="texto-izquierdo">
-                    <h3>Busca Spots </h3>
-                    <p> Encuentra los spots mas cercanos a tu ubicación en un radio de 100 km. </p>
-                    <h3>Conoce Skaters </h3>
-                    <p>Recibe notificaciones cuando haya skaters patinando en tus spots favoritos. </p>
-                    <h3>Eventos</h3>
-                    <p>Podrás ver información de eventos relacionados con el skate y campeonatos.</p>
-                </div>
-                <div class="imagen-central">
-                    <img src="assets/img/screen-shot-6.png" alt="vista app movil de patina">
-                </div>
-                <div class="texto-derecho">
-                    <h3>Comenta</h3>
-                    <p>Escribe tu opinión en cada spot que visites para que otros skaters puedan leerla antes de patinar en él.
-                    </p>
-                    <h3>información</h3>
-                    <p>Podrás saber si los spots tienen guardia, horarios de funcionamiento, obtaculos que hay, entre otras cosas.</p>
-                    <h3>Agregar Sport</h3>
-                    <p>Si encuentras spots algún spot que valga la pena, puedes sacarle fotos y subirlo.</p>
-
-                </div>
-
-
-            </section>
-            <div class="imagen-descarga">
-                <img src="assets/img/image-4.png" alt="descarga tu app para android y iphone">
-            </div>
-
-
         </div>
-
+        <div id="map"></div>
     </main>
     <footer class="footer">
         <p>Sitio Web hecho por Tamara Salinas</p>
@@ -122,6 +88,8 @@
     </footer>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <script src="./js/ubicacion.js"></script>
 </body>
 
 </html>
