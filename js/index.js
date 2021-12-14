@@ -128,7 +128,6 @@ const mostrarSpots = skateparks => {
     }
 
 
-
     agregarEventoLike()
 }
 mostrarSpots( spots );
